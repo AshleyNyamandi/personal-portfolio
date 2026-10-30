@@ -1,10 +1,11 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
 
+
 const testimonials = [
   {
     quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
+      "Ashley is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
     author: "Sarah Chen",
     role: "CTO, Tech Innovators Inc.",
     avatar:
@@ -12,7 +13,7 @@ const testimonials = [
   },
   {
     quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
+      "Working with Ashley was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
     author: "Michael Rodriguez",
     role: "Product Manager, Digital Solutions",
     avatar:
@@ -20,16 +21,16 @@ const testimonials = [
   },
   {
     quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Watson",
+      "Ashley expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
+    author: "Emily Moyo",
     role: "Engineering Lead, StartUp Labs",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
   },
   {
     quote:
-      "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "David Kim",
+      "Not only is Ashley technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
+    author: "David Moyo",
     role: "CEO, Innovation Hub",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
@@ -38,6 +39,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   const [activeIdx, setActiveIdx] = useState(0);
+  const test = useState(true);
 
   const next = () => {
     setActiveIdx((prev) => (prev + 1) % testimonials.length);
@@ -48,6 +50,11 @@ export const Testimonials = () => {
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
+  if (test) return (
+    <section id="testimonials">
+
+    </section>
+  )
   return (
     <section id="testimonials" className="py-32 relative overflow-hidden">
       <div

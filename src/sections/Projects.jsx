@@ -2,40 +2,31 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Zim online learning platform",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "Zimbabwe's dedicated online learning platform. Past papers, revision notes, and practice questions, all in one place. Study smarter, score higher.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+    tags: ["React", "Typescript", "Express JS"],
+    link: "https://nymd-school-lac.vercel.app/",
+    github: "https://github.com/AshleyNyamandi/nymd-school",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Avis Digital Solution",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "Avis Digital Solutions Website",
     image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+    tags: ["React", "Tailwind"],
+    link: "https://avis-digital-solutions-five.vercel.app/",
+    github: "https://github.com/AshleyNyamandi/avis-digital-solutions",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Live chat app",
     description:
       "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
     image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+    tags: ["React", "Express JS", "Socket IO"],
+    link: "https://chat-app-ten-swart-27.vercel.app/",
+    github: "https://github.com/AshleyNyamandi/chat-app",
   },
 ];
 

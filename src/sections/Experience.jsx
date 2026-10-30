@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const experiences = [
   {
     period: "2022 — Present",
@@ -38,6 +40,12 @@ const experiences = [
 ];
 
 export const Experience = () => {
+  const test = useState(true)
+  if (test) return (
+    <section id="experience">
+
+    </section>
+  )
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
       <div
