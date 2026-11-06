@@ -5,41 +5,20 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "Ashley is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Sarah Chen",
-    role: "CTO, Tech Innovators Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "Ashley doesn't just build software, he builds results. He took our most complex business requirements and turned them into elegant, scalable solutions that work flawlessly. If you want a developer who actually moves your business forward, this is your guy.",
+    author: "Kream Koffee Zimbabwe",
+    role: "Founder & Manager",
   },
   {
     quote:
-      "Working with Ashley was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Rodriguez",
-    role: "Product Manager, Digital Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
-  },
-  {
-    quote:
-      "Ashley expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Moyo",
-    role: "Engineering Lead, StartUp Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
-  },
-  {
-    quote:
-      "Not only is Ashley technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "David Moyo",
-    role: "CEO, Innovation Hub",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "Ashley was a game-changer for our business. He delivered ahead of schedule and raised the quality standard for our entire team, solutions that are clean, reliable, and built to last. We'd work with him again in a heartbeat.",
+    author: "Aviz Digital Solutions",
+    role: "Founder & CEO",
   },
 ];
 
 export const Testimonials = () => {
   const [activeIdx, setActiveIdx] = useState(0);
-  const test = useState(true);
 
   const next = () => {
     setActiveIdx((prev) => (prev + 1) % testimonials.length);
@@ -50,11 +29,6 @@ export const Testimonials = () => {
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
-  if (test) return (
-    <section id="testimonials">
-
-    </section>
-  )
   return (
     <section id="testimonials" className="py-32 relative overflow-hidden">
       <div
@@ -107,11 +81,6 @@ export const Testimonials = () => {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonials[activeIdx].avatar}
-                  alt={testimonials[activeIdx].author}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                />
                 <div>
                   <div className="font-semibold">
                     {testimonials[activeIdx].author}

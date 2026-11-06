@@ -8,14 +8,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
     value: "nyamandiashley@gmail.com",
-    href: "mailto:pedro@example.com",
+    href: "nyamandiashley@gmail.com",
   },
   {
     icon: Phone,
@@ -43,38 +42,45 @@ export const Contact = () => {
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const accessKey = "83144c37-f253-4947-bf2d-9263645f66e1";
 
-      if (!serviceId || !templateId || !publicKey) {
+      if (!accessKey) {
         throw new Error(
-          "EmailJS configuration is missing. Please check your environment variables."
+          "Web3Forms configuration is missing. Please check your environment variables."
         );
       }
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        },
-        publicKey
-      );
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Failed to send message.");
+      }
 
       setSubmitStatus({
         type: "success",
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error("EmailJS error:", error);
+    } catch (error) {
+      console.error("Web3Forms error:", error);
       setSubmitStatus({
         type: "error",
         message:
-          error.text || "Failed to send message. Please try again later.",
+          error.message || "Failed to send message. Please try again later.",
       });
     } finally {
       setIsLoading(false);
@@ -192,9 +198,9 @@ export const Contact = () => {
                      }`}
                 >
                   {submitStatus.type === "success" ? (
-                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 shrink-0" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                    <AlertCircle className="w-5 h-5 shrink-0" />
                   )}
                   <p className="text-sm">{submitStatus.message}</p>
                 </div>
