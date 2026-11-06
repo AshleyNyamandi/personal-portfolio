@@ -1,6 +1,24 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+{
+  title: "Kream Koffee Zimbabwe",
+  description:
+    "A sleek, high-conversion web application designed for Masvingo's premier specialty café and restaurant.",
+  image: "/projects/kreamkoffee.png",
+  tags: ["React", "TypeScript", "Tailwind"],
+  link: "https://www.avizdigitalsolutions.co.zw/",
+  github: "https://github.com/AshleyNyamandi/kream-Koffee",
+},
+  {
+    title: "Aviz Digital Solution",
+    description:
+      "Aviz Digital Solutions Website is a Zimabwe based company that provides Wifi and security camera installations",
+    image: "/projects/project2.png",
+    tags: ["React", "Tailwind"],
+    link: "https://www.avizdigitalsolutions.co.zw/",
+    github: "https://github.com/AshleyNyamandi/avis-digital-solutions",
+  },
   {
     title: "Zim online learning platform",
     description:
@@ -9,15 +27,6 @@ const projects = [
     tags: ["React", "Typescript", "Express JS"],
     link: "https://nymd-school-lac.vercel.app/",
     github: "https://github.com/AshleyNyamandi/nymd-school",
-  },
-  {
-    title: "Avis Digital Solution",
-    description:
-      "Avis Digital Solutions Website",
-    image: "/projects/project2.png",
-    tags: ["React", "Tailwind"],
-    link: "https://avis-digital-solutions-five.vercel.app/",
-    github: "https://github.com/AshleyNyamandi/avis-digital-solutions",
   },
   {
     title: "Live chat app",
@@ -72,7 +81,7 @@ export const Projects = () => {
                 />
                 <div
                   className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
+                bg-linear-to-t from-card via-card/50
                  to-transparent opacity-60"
                 />
                 {/* Overlay Links */}
