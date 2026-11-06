@@ -7,7 +7,7 @@ const projects = [
     "A sleek, high-conversion web application designed for Masvingo's premier specialty café and restaurant.",
   image: "/projects/kreamkoffee.png",
   tags: ["React", "TypeScript", "Tailwind"],
-  link: "https://www.avizdigitalsolutions.co.zw/",
+  link: "https://www.kreamkoffee.co.zw/",
   github: "https://github.com/AshleyNyamandi/kream-Koffee",
 },
   {
